@@ -1,0 +1,9 @@
+packages = [ "pyscript-ltk>=0.1.2",]
+name = "LTK base Copy"
+
+[files]
+"https://raw.githubusercontent.com/laffra/ltk/main/ltk/ltk.js" = "ltk/ltk.js"
+"https://raw.githubusercontent.com/laffra/ltk/main/ltk/ltk.css" = "ltk/ltk.css"
+
+[[fetch]]
+files = ["./tablet_widget.py", "./svg.py", "./tablet_weaver.py"]

@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css?family=Pathway+Gothic+One);
+
+// look into using:
+// inline-size: fit-content; //E.g. for buttons
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.unselectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.ltk-horizontal-split-pane-middle {
+    border: 0.5px solid black;
+    background-color: #CCC;
+}
+.ltk-horizontal-split-pane-middle:hover {
+    background-color: #ACD;
+}
+#widget_box  {
+    position: relative;
+    display: inline-block;
+    pointer-events: none;
+    //flex-grow: 1;
+    //max-width: 100%;
+    //height: auto;
+    border: 2px dashed red;
+    //width: 200px;
+}
+#draft_handle  {
+    position: absolute;   
+    pointer-events: all;  // overrides parent
+    top: 0;
+    left: 0;
+   //border: 2px dotted blue;
+}
+#int_lines, #sel, #targets, #sel_targets, .ignored  {
+    pointer-events: none;
+}
+#draft_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px dashed green;
+}
+.selectable  {
+    pointer-events: all;
+}
+.draggable {
+    border-color: "#0F0"
+}
+#diamonds {
+    pointer-events: none;
+}
+//#grid_labels  {
+ //   -webkit-user-select: none;
+ //   -moz-user-select: none;
+ //   -ms-user-select: none;
+ //   user-select: none;
+//}
+#svg_current {
+    margin: 2px 4px 5px 5px;
+    height: 68px;
+    border: 2px solid red;
+}
+#size_box {
+    border: 2px dotted cyan;
+}
+
+.label_wh {
+    font-family: "Pathway Gothic One";
+    font-size: 10pt;
+    text-align: 'center';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+//
+.color-row {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    & .label {
+        text-align: right;
+        color: black;
+        width: 3.0rem;
+        height: 0.75rem;
+        margin: 0px;
+        padding: 2px;
+    }
+    & .color-block {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        height: 1.5rem;
+    }
+    & .color-count {
+        text-align: right;
+        color: black;
+        width: 3.0rem;
+        height: 0.75rem;
+        margin: 0px;
+        padding: 2px;
+    }
+}
+
+.color-code {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    line-height: 0.9rem;
+    width: 50px;
+    margin: auto;
+    opacity: 0%;
+    border-radius: 3px;
+    background-color: #eedddd;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+
+    &:hover {
+        opacity: 100%;
+        transition: opacity 0.3s ease;
+    }
+}
